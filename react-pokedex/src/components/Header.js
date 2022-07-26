@@ -8,7 +8,7 @@ const Header = () => {
             <Navbar bg="dark" variant='dark' expand="lg" collapseOnSelect>
                 <Container>
                     <LinkContainer to="/">
-                        <Navbar.Brand>Zenatix Assignment</Navbar.Brand>
+                        <Navbar.Brand>POKEDEX</Navbar.Brand>
                     </LinkContainer>
                 </Container>
             </Navbar>

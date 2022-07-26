@@ -15,20 +15,25 @@ const Homepage = () => {
     const [loading, setLoading] = useState(true);
     const [input, setInput] = useState("");
 
-   const onInputChange = useCallback(
-    ev => {
-        setInput(ev.target.value);
-    }, [setInput]
-   )
-   const onSearch = async () => {
-    const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${input}`);
-    return res;
-   }
-   const onKeyDown = ev => {
-    if(ev.keyCode === 13){
-        onSearch();
-    }
-   }
+
+    const onInputChange = (e) =>{
+            setInput(e.target.value);
+        };
+
+//    const onInputChange = useCallback(
+//     ev => {
+//         setInput(ev.target.value);
+//     }, [setInput]
+//    )
+//    const onSearch = async () => {
+//     const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${input}`);
+//     return res;
+//    }
+//    const onKeyDown = ev => {
+//     if(ev.keyCode === 13){
+//         onSearch();
+//     }
+//    }
 
     async function changeloopPrev() {
         if(len > 1){
@@ -77,7 +82,7 @@ const Homepage = () => {
         <>
         <div style={{margin: 'auto',margin : '20px'}}>
             <input style={{padding: '10px', width:'500px'}} type="text" placeholder='Search pokemon'
-             onChange={onInputChange} onKeyDown={onKeyDown} value= {input} />
+             onChange={onInputChange}  value= {input} />
         </div>
         {loading ? (
             <Loader/>
