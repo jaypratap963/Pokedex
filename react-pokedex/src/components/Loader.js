@@ -16,7 +16,7 @@ const Loader = () => {
             </Row>
             <Row>
                 <Col>
-                    <div className='mx-3'>Loading....</div>
+                    <div className='mx-3'>Loading...</div>
                 </Col>
             </Row>
         </div>

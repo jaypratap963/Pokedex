@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect} from 'react';
 import axios from 'axios';
 import { Row, Col } from 'react-bootstrap';
 
 // Components
 import Pokemon from '../components/Pokemon';
 import Loader from '../components/Loader';
-import { Link } from 'react-router-dom';
 
 var len = 1;
 var len1 = 20;
